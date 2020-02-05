@@ -976,7 +976,8 @@
 !            O2_Flux=cff3*(O2satu-Bio(i,k,iOxyg))
 ! Second part of equation is for considering bubbling effects on gas transfer 
 ! (added by Ilia 2019)
-            O2_Flux=cff3*(O2satu-Bio(i,k,iOxyg))+                       & 
+
+	O2_Flux=cff3*(O2satu-Bio(i,k,iOxyg))+                       & 
      &      cff6*((1+cff8)*O2satu-Bio(i,k,iOxyg))                       & 
      &      +cff7
 			
