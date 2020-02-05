@@ -952,11 +952,7 @@
 ! Calculate supersaturation due to partialy dissolved bubbles
             cff8=1.5244_r8*cff5**1.06_r8
 			
-! test
-!            WRITE (*,*) cff5,  cff7,  cff8 , cff6 , cff3  
-!			 WRITE (*,*) dtdays , fiter
-
-			
+		
 
 !  Calculate O2 saturation concentration using Garcia and Gordon
 !  L&O (1992) formula, (EXP(AA) is in ml/l).
@@ -977,7 +973,7 @@
 ! Second part of equation is for considering bubbling effects on gas transfer 
 ! (added by Ilia 2019)
 
-	O2_Flux=cff3*(O2satu-Bio(i,k,iOxyg))+                       & 
+	O2_Flux=cff3*(O2satu-Bio(i,k,iOxyg))+                           & 
      &      cff6*((1+cff8)*O2satu-Bio(i,k,iOxyg))                       & 
      &      +cff7
 			
